@@ -1,6 +1,6 @@
-login https:localhost:9443/asc/ ADMIN app229489549
-new Simple ./
-oa Simple
+login https://AMAZONA-Q7NG2FR:9443/asc/ ADMIN app229489549 --acceptssl
+new Simple .
+cd Simple
 im *.ppf
 scan
 exit
