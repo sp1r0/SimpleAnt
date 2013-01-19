@@ -1,0 +1,132 @@
+>> Welcome to AppScan Source Edition!
+----------------------------------------------------------------------
+|	Log into the AppScan Source Edition Server.
+|
+|	Required Arguments:
+|	   host name
+|	   user name (omit if credentials have been persisted)
+|	   password  (omit when there is no password or
+|	   	        if credentials have been persisted)
+|
+|	Optional Arguments:
+|	   -persist - save the login credentials to a file
+|
+|	Example:
+|	   LOGIN server user password
+|
+----------------------------------------------------------------------
+Login successful.
+New Scan started
+
+Scanning Project SimpleAnt (1 of 1)
+Preparing project for scan...
+Preparing source root "C:\TestApp\SimpleAnt\src\" (1 of 1)
+Compiling 25 source files to C:\TestApp\SimpleAnt\SimpleAnt_staging
+Note: C:\TestApp\SimpleAnt\src\TestCase_IOT_List.java uses unchecked or unsafe operations.
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Array.java (1 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Branching.java (2 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Instance.java (3 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Instance_Assigns.java (4 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Instance_Val_Confidence.java (5 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Instance_Val_Encode.java (6 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_List.java (7 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Looping.java (8 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Lost_Instance.java (9 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Lost_MemberTaint.java (10 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Lost_MemberTaint.java (11 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Lost_XFile_Part1.java (12 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Lost_XFile_Part2.java (13 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_MediumCallStack.java (14 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_MemberTaint.java (15 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_MemberTaint.java (16 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_MemberTaint_OutParam.java (17 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_MemberTaint_OutParam.java (18 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_OverlapTrace.java (19 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Recursion.java (20 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Simple_Validation.java (21 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Static.java (22 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_Static_Assigns.java (23 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_UserValidation.java (24 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_UserValidation2.java (25 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_XFile_Part1.java (26 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_XFile_Part2.java (27 of 28)
+Scanning C:\TestApp\SimpleAnt\src\TestCase_IOT_XFile_Val_Part1.java (28 of 28)
+Preparing for Vulnerability Analysis...
+Performing Vulnerability Analysis...
+Generating Findings...
+Preparing project for scan...
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_Array.java (1 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_Branching.java (2 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_Instance.java (3 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_Instance_Assigns.java (4 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_Instance_Val_Confidence.java (5 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_Instance_Val_Encode.java (6 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_List.java (7 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_Looping.java (8 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_Lost_Instance.java (9 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_Lost_MemberTaint.java (10 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_Lost_XFile_Part1.java (11 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_Lost_XFile_Part2.java (12 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_MediumCallStack.java (13 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_MemberTaint.java (14 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_MemberTaint_OutParam.java (15 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_OverlapTrace.java (16 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_Recursion.java (17 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_Simple_Validation.java (18 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_Static.java (19 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_Static_Assigns.java (20 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_UserValidation.java (21 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_UserValidation2.java (22 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_XFile_Part1.java (23 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_XFile_Part2.java (24 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Searching C:\TestApp\SimpleAnt\src\TestCase_IOT_XFile_Val_Part1.java (25 of 25)
+Error in Pattern 'DriverManager\\.getConnection\\s*\\(': Unmatched ( or \(.
+Scanned Project SimpleAnt: Total files: 25 Total findings: 292 Total lines: 1944 vkloc: 83.333333 v-density: 2750.462963
+Scanned Application SimpleAnt: Total files: 25 Total findings: 292 Total lines: 1944 vkloc: 83.333333 v-density: 2750.462963
+Scan completed: Total files: 25 Total findings: 292 Total lines: 1944 vkloc: 83.333333 v-density: 2750.462963
+Elapsed Time - 33 Seconds
+
+  -------------------
+  Total Call Sites: 292
+  Total Vulnerabilities with High Severity: 0
+  Total Vulnerabilities with Medium Severity: 0
+  Total Vulnerabilities with Low Severity: 0
+  Total Type I Exceptions with High Severity: 51
+  Total Type I Exceptions with Medium Severity: 16
+  Total Type I Exceptions with Low Severity: 81
+  Total Type II Exceptions with High Severity: 0
+  Total Type II Exceptions with Medium Severity: 5
+  Total Type II Exceptions with Low Severity: 9
+  Total Lines: 1944
+  Max V-Density: 2750.4629629629626
+  Max V/kloc: 83.33333333333333
+  V-Density: 2750.4629629629626
+  V/kloc: 83.33333333333333
+
+Logged out.
+>> Exiting AppScan Source Edition Command Line Interface...
+>> Exiting AppScan Source Edition Command Line Interface...

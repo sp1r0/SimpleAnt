@@ -1,0 +1,57 @@
+
+<project name="SimpleAnt" default="compile" basedir=".">
+
+<!-- ==================== File and Directory Names ======================== -->
+
+  <property name="build.home"    		   value="${basedir}/bin"/>
+  <property name="src.home"     		   value="${basedir}/src"/>
+
+<!-- ==================== Clean Target ==================================== -->
+<!--
+  The "clean" target deletes any previous "build" directory,
+  so that you can be ensured the application can be built from scratch.
+-->
+
+ <target name="clean"
+   description="Delete old build and dist directories">  
+    <delete dir="${build.home}"/>
+    <mkdir dir="${build.home}"/>   
+ </target>
+	
+<!-- ==================== Compile Target ================================== -->
+<!--
+  The "compile" target transforms source files (from your "src" directory)
+  into object files in the appropriate location in the build directory.
+-->
+
+  <taskdef resource="com/ouncelabs/ounceant/task/ounce.xml" classpath="ounceant.jar"/>
+
+  
+  <target name="compile" depends="clean"
+   description="Compile Java sources">
+    <!-- Compile Java classes as necessary -->
+    <mkdir dir="${build.home}"/>
+    <javac srcdir="${src.home}"
+           destdir="${build.home}"  >
+    </javac>
+  </target>
+
+  <ounceCreateProject
+  	    name="SimpleAnt2_compile"
+        workingDir="."  
+
+		>
+      <ounceSourceRoot dir="src" />		
+<!--      <ounceWeb webContextRoot="${basedir}/WebContent"  analyzeStrutsFramework="true"  importStrutsValidation="true" />
+-->
+
+      <ounceExclude dir="src/excludeme"/>
+      <ounceExclude file="src/bad.java"/>
+        
+  </ounceCreateProject>
+  
+</project>
+
+
+
+

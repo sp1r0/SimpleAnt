@@ -1,0 +1,23 @@
+﻿# IN ORDER FOR THIS EXAMPLE TO WORK WITH 6.0, YOU MUST BE LICENSED TO USE THE AUTOMATION SERVER
+
+# LOGIN
+# Core Hostname: localhost
+# Username: admin
+# Password: «no password»
+login localhost admin
+
+# If you've persisted your login information use the following:
+# login «hostname»
+#
+# To persist the login credentials, when logging into CLI, use the following command syntax
+# login «hostname» «username» «password» -persist
+
+# open the application
+oa SimpleAnt.paf
+
+# run an assessment
+ra
+# assessment will be automatically saved to XML
+
+# log out and quit
+quit

@@ -1,0 +1,90 @@
+
+<project name="SimpleAnt" default="compile" basedir=".">
+
+<!-- ==================== File and Directory Names ======================== -->
+
+  <property name="build.home"    		   value="${basedir}/bin"/>
+  <property name="src.home"     		   value="${basedir}/src"/>
+  <!-- Ounce Windows Installation Directory -->
+<!--    <property name="ounce.installDir" value="C:\\Program Files\\IBM\\AppScan Source"/>
+  -->
+	    <!-- taskdef Ounce resource.  This is not necessary for javac integration
+         only but is required for custom Ounce tasks like ounceCreateProject
+         (used below to specify the web context root). -->
+    <taskdef resource="com/ouncelabs/ounceant/task/ounce.xml" classpath="ounceant.jar"/>
+	<!-- use the Ounce ant compiler adapter so an Ounce Project is generated during the build -->
+<!--    <property name="build.compiler"
+	value="com.ouncelabs.ounceant.OunceCompilerAdapter"/>-->
+    <!-- manually set the Project name (although the default is fine - it would be project_compile.ppf
+         because the target is "compile" and the directory is named "project" -->
+<!--    <property name="ounce.project_name" value="SimpleAnt"/>-->
+    <!-- add the Project to an application -->
+<!--    <property name="ounce.application_name" value="SimpleAnt"/>-->
+    <!-- put the Application in the same directory -->
+<!--    <property name="ounce.application_dir" value="."/>-->
+	
+<!-- ==================== Clean Target ==================================== -->
+<!--
+  The "clean" target deletes any previous "build" directory,
+  so that you can be ensured the application can be built from scratch.
+-->
+
+ <target name="clean"
+   description="Delete old build and dist directories">  
+    <delete dir="${build.home}"/>
+	<delete file="SimpleAnt.paf" />
+	<delete file="SimpleAnt.ppf" />
+    <mkdir dir="${build.home}"/>   
+ </target>
+	
+<!-- ==================== Compile Target ================================== -->
+<!--
+  The "compile" target transforms source files (from your "src" directory)
+  into object files in the appropriate location in the build directory.
+-->
+
+  <target name="compile" depends="clean"
+   description="Compile Java sources">
+    <!-- Compile Java classes as necessary -->
+    <mkdir dir="${build.home}"/>
+    <javac srcdir="${src.home}"
+           destdir="${build.home}"  >
+    </javac>
+  
+  <!-- Ounce specific property definition begins here.  Note that since ant's
+         "property" task creates immutable properties we would want to use
+         ant-contrib's "var" task instead if there was more than one project
+         or application.  See the Ounce Utility Guide for more information -->
+  
+  <ounceCreateProject
+  	    name="SimpleAnt_compile"
+        workingDir="."  
+
+		>
+      <ounceSourceRoot dir="src" />		
+<!--      <ounceWeb webContextRoot="${basedir}/WebContent"  analyzeStrutsFramework="true"  importStrutsValidation="true" />
+-->
+
+<!--      <ounceExclude dir="src/excludeme"/>
+      <ounceExclude file="src/bad.java"/>-->
+        
+  </ounceCreateProject>
+	
+    <!-- No need to specify any other attributes for ounceCreateProject task.
+         The javac integration will pick up the class path, source roots, etc. -->
+
+    <!-- end Ounce additions here. -->
+    
+  </target>
+  
+  <target name="ounceScan">
+     <!-- Project and Application are created, run a scan with the CLI. -->
+      <ounceCli
+        dir="${ounce.installDir}"
+        script="cli_script.txt"
+        output="cli_log.txt"/>
+  </target>
+  
+</project>
+
+

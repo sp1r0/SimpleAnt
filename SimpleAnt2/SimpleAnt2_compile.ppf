@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project default_configuration_name="Configuration 1" language_type="2" name="SimpleAnt2_compile">
+	<Configuration class_path=";..\..\Program Files\Rational\ClearQuest\cqjni.jar" name="Configuration 1"/>
+	<Source exclude="false" path="./src\excludeme" web="false"/>
+	<Source exclude="false" path="./src" web="false"/>
+</Project>
