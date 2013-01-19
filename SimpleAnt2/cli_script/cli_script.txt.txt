@@ -1,0 +1,6 @@
+login https:localhost:9443/asc/ ADMIN app229489549
+new Simple ./
+oa Simple
+im *.ppf
+scan
+exit
