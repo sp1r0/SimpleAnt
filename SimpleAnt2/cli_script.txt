@@ -1,6 +1,7 @@
 login https://AMAZONA-Q7NG2FR:9443/asc/ ADMIN app229489549 -acceptssl
+del Simple
 new Simple .
 cd Simple
-im *.ppf
-scan
+im SimpleAnt2\*.ppf
+scan C:\TeamCity\appscan_working\SimpleAnt2.ozasmt
 exit
